@@ -37,11 +37,12 @@ class _MyHomePageState extends State<MyHomePage> {
       //   elevation: 0,
       // ),
       body: SafeArea(
+        top: false, //make the ios notch area to be an appbar
         child: CustomScrollView(slivers: [
           SliverAppBar(
             pinned: true,
             floating: true,
-            expandedHeight: 100.0,
+            expandedHeight: 80.0,
             flexibleSpace: FlexibleSpaceBar(
               title: Text('Sliver test'),
               background: Image.network(
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 fit: BoxFit.fitWidth,
               ),
             ),
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.lightGreen,
             elevation: 1.5,
           ),
           SliverList(
